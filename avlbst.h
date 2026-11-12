@@ -384,7 +384,7 @@ void AVLTree<Key, Value>::removeFix(AVLNode<Key, Value>*n, int8_t diff)
           n->setBalance(-1);
           c->setBalance(1);
         }else{
-          AVLNode<Key, Value>* g = n->getRight();
+          AVLNode<Key, Value>* g = c->getRight();
           int8_t gb = g->getBalance();
           rotateLeft(c);
           rotateRight(n);
